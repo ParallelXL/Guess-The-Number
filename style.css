@@ -131,3 +131,90 @@ h1 {
 .label-score {
   margin-bottom: 2rem;
 }
+
+@media screen and (max-width: 720px) {
+    header {
+      height: 250px !important;
+      width: 100%;
+      margin-bottom: 8rem;
+    }
+  
+    header {
+      height: 50vh;
+    }
+  
+    header > h1 {
+      font-size: 1.6rem;
+    }
+  
+    header .between {
+      font-size: 1rem;
+      position: fixed;
+      padding: 1rem;
+    }
+  
+    .again {
+      font-size: 1.4rem;
+      padding: 1rem;
+      position: fixed;
+    }
+  
+    main {
+      height: fit-content;
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      justify-content: center;
+    }
+  
+    .left,
+    .right {
+      width: 100vw !important;
+    }
+  
+    .left {
+      flex-direction: row;
+      align-items: center !important;
+      justify-content: space-evenly;
+    }
+  
+    .number {
+      font-size: 5rem;
+      padding: 2rem 0;
+      width: 15rem;
+    }
+  
+    .guess,
+    .guess:focus {
+      font-size: 2rem;
+      padding: 2rem 0;
+      width: 10rem;
+      margin: 0;
+    }
+  
+    .btn {
+      padding: 1rem 1.2rem;
+      font-size: 1.6rem;
+    }
+  
+    .message {
+      height: unset !important;
+      width: 100% !important;
+      font-size: 1.5rem;
+      margin: 3rem 0 !important;
+      width: 100vw !important;
+      margin: 6vh 0 !important;
+    }
+  
+    .label-highscore,
+    .label-score {
+      font-size: 1.5rem;
+      width: 100vw;
+      margin: 4vh 0 !important;
+    }
+  
+    ::-webkit-scrollbar {
+      display: none;
+    }
+  }
+  
