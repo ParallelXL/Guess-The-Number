@@ -1,12 +1,5 @@
 "use strict";
 
-// console.log(document.querySelector(".message").textContent);
-document.querySelector(".message");
-document.querySelector(".number");
-document.querySelector(".score");
-document.querySelector(".guess");
-console.log(document.querySelector(".guess").value);
-
 let secretNumber = Math.trunc(Math.random() * 20) + 1;
 let score = 20;
 let highscore = 0;
@@ -15,9 +8,10 @@ const displayMessage = function (message) {
   document.querySelector(".message").textContent = message;
 };
 
-document.querySelector(".check").addEventListener("click", function () {
+document.querySelector(".left").addEventListener("submit", function (e) {
+  e.preventDefault();
+
   const guess = Number(document.querySelector(".guess").value);
-  console.log(guess, typeof guess);
 
   // When there is no input
   if (!guess) {
@@ -75,6 +69,8 @@ document.querySelector(".check").addEventListener("click", function () {
       document.querySelector(".score").textContent = 0;
     }
   }
+
+  document.querySelector(".guess").value = "";
 });
 
 document.querySelector(".again").addEventListener("click", function () {
